@@ -1,0 +1,473 @@
+body{
+    text-align: center;
+    background-color: #1f1f1f;/*changed*/
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.map{
+    position: relative;
+    display:inline-block;
+    height: 700px;
+    width: 1500px;
+    margin: 5px;
+    border:5px solid black ;
+    background-color:rgb(217, 217, 217);
+    overflow: hidden;
+    z-index: -5;
+}
+
+.man{
+    display: inline-block;
+    height: 90px;
+    width:74px;
+    bottom:100px;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}
+
+.one{
+    position:absolute;
+    left:300px;
+    background-image:url(img/mage.png);
+}
+
+.two{
+    position:absolute;
+    left:1200px;
+    background-image:url(img/mechanician.png);
+}
+
+.line{
+    height: 2px;
+    width: 300px;
+}
+
+.oo{
+    position: absolute;
+    left:960px;
+    bottom:180px;
+}
+
+.tt{
+    position: absolute;
+    background:url(img/gunFire.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 55px;
+    left:0;
+    bottom:20px;
+    width: 200px;
+}
+
+.meteor{
+    background: url(img/fire.gif) no-repeat;
+    height: 110px;
+    width:135px;
+    position:absolute;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    bottom:-1000px;
+    z-index:2;
+}
+
+.shielding{
+    position: absolute;
+    display: inline-block;
+    height: 100px;
+    width:74px;
+    bottom:-500px;
+    left:300px;
+    background-image: url(img/shield.png);
+    background-position: center;
+    background-size: cover;
+/*    z-index: 2;*/
+}
+
+.ground{
+    position: absolute;
+    display: inline-block;
+    background-color:rgb(121, 120, 120);
+    height: 30px;
+    width: 380px;
+}
+
+.bottom{
+    height: 105px;
+    bottom: 0px;
+    /*
+    width: 1000px;
+    left:250px; */
+    width:100%;
+    left:0;
+    background-color: #383838;/*changed*/
+}
+
+.left{
+    bottom:320px;
+    left:0;
+    display: none;/*changed*/
+}
+
+.right{
+    display: none;/*changed*/
+    right:50px;
+    bottom:420px;
+}
+
+.medical{
+    position: absolute;
+    display:inline-block;
+    height: 40px;
+    width:35px;
+    transform: rotate(15deg);
+    background-image: url(img/bag.png);
+    background-size: cover;
+    background-position: center;
+    bottom:460px;
+    left:1300px;
+/*    z-index: 0;*/
+}
+
+.bottle{
+    background-image: url(img/bottle.png);
+    left:200px;
+    bottom:110px;
+    width:20px;
+}
+
+.start{
+    background-color:rgba(165, 165, 165,0.8);
+    position:relative;
+    height: 100%;
+    width:100%;
+    z-index: 7;
+}
+
+.start p{
+    padding-top: 15%;
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.gg{
+    background-color:rgba(165, 165, 165,0.8);
+    position:relative;
+    height: 100%;
+    width:100%;
+}
+
+.winner{
+    padding-top: 15%;
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.replay{
+    text-align: center;
+    font-size:40px;
+    display: inline-block;
+    top:30%;
+    left:43%;
+    width:180px;
+    margin-top: 10%;
+    background-color:gray;
+    border:1px solid black;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px;
+    transition:0.2s;
+    cursor: pointer;
+    position: absolute;
+    z-index:31;
+}
+
+.replay:hover{
+    background-color:rgb(155, 155, 155);
+}
+
+.health{
+    position: fixed; 
+    display:inline-block;
+    height: 50px;
+    width:380px;
+    border:2px solid white;
+    bottom:50px;
+}
+
+.H1{
+    position: absolute;
+    height: 50px;
+    width:380px;
+    transition: 0.2s;
+}
+
+.health>:first-child{
+    height: 50px;
+    background-color:darkred;
+    transition:1.5s;
+}
+
+.h11{
+    background-color:red;
+}
+
+.shield{
+    background-color:darkgray;
+}
+
+.H2{
+    position: absolute;
+    right:0px;
+    height: 50px;
+    width:400px;
+    transition: 0.2s;
+}
+
+.h21{
+    background-color:red;
+}
+
+.B1{
+    left:100px;
+}
+
+.B2{
+    width:400px;
+    right:100px;
+}
+
+.tip{
+    position:fixed;
+    display: inline-block;
+    height: 50px;
+    width: 220px;
+    bottom:53px;
+}
+
+.mag{
+    left:530px;
+}
+
+.mech{
+    right:550px;
+}
+
+.cd{
+    position: absolute;
+    display: inline-block;
+    height: 50px;
+    width:50px;
+    background-color:aqua;
+    font-size: 35px;
+    text-shadow: 1px 1px 1px;
+    border:1px solid black;
+    transition:1s;
+}
+
+.tip>:first-child{
+    left:0px;
+}
+
+.tip>:nth-child(2){
+    left:55px;
+}
+
+.tip>:nth-child(3){
+    left:110px;
+}
+
+.tip>:nth-child(4){
+    left:165px;
+    background-color:silver;
+}
+
+.enemy{
+    background-image: url(img/servant.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 74px;
+    height: 90px;
+}
+
+.fireBlock{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 150px;
+    left: 150px;
+    transform: rotate(25deg);
+    background-image: url(img/servantFire.gif);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.killerM{
+    position: absolute;
+    width: 80px;
+    height: 50px;
+    top: 100px;
+    left: 100px;
+    background-image: url(img/terrorDrone.png);
+    background-size: cover;
+    background-position: center;
+    transition: none;
+}
+
+#servantHealth{
+    position: absolute;
+    height: 10px;
+    width: 100px;
+    background-color: #eb1919;
+}
+
+#servantHealthBox{
+    position: absolute;
+    height: 7px;
+    width: 96px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid black;
+}
+
+.machineHealth{
+    position: absolute;
+    width: 100px;
+    height: 7px;
+    background-color: crimson;
+}
+
+.machHealContainer{
+    position: absolute;
+    width: 97px;
+    height: 6px;
+    background-color:rgba(255, 255, 255, 0);
+    border: 2px solid black;
+}
+
+#bulletBox div{
+    position: absolute;
+    border-radius: 50px;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(39, 0, 255, 0.7);
+}
+
+#iceShoot{
+    top: 3px;
+    position: absolute;
+    left: 50px;
+    width: 45px;
+    height: 45px;
+    background-size: 100% 100%;
+    transition:0.5s;
+}
+
+#speedTip{
+    position: absolute;
+    left:-50px;
+    width: 5px;
+    height: 50px;
+    background-color: red;
+    top: 550px;
+    display: inline-block;
+}
+
+#bloodBox div{
+    position: absolute;
+    left: -500px;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}
+
+.energy{
+    position: fixed;
+    display:inline-block;
+    height: 20px;
+    width: 400px;
+    bottom:25px;
+    border:1px solid black;
+    overflow: hidden;
+}
+
+.Mag{
+    left:100px;    
+}
+
+.Mech{
+    right:100px;
+}
+
+.enLine{
+    display: inline-block;
+    position: absolute;
+    height: 20px;
+    width: 0px;
+    background-color:aqua;
+}
+
+.En1{
+    left:0px;
+}
+
+.En2{
+    right:0px;
+}
+
+.sign{
+    position: fixed;
+    display: none;
+    height: 30px;
+    width: 30px;
+    bottom: 15px;
+    background-image:url(img/logo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.Ma{
+    left: 550px;
+}
+
+.Me{
+    right:550px;
+}
+
+
+#leftHouse{
+    position: absolute;
+    left: -20px;
+    width: 450px;
+    height: 300px;
+    bottom: 100px;
+    background-image: url(img/steve.art/leftHouse.png);
+    background-size: 100% 100%;
+/*    z-index: -3;*/
+}
+
+#rightHouse{
+    position: absolute;
+    left: 890px;
+    width: 650px;
+    height: 700px;
+    bottom: -67px;
+    background-image: url(img/steve.art/rightHouse.png);
+    background-size: 100% 100%;
+/*    z-index: -3;*/
+}
+
+#back{
+    position: absolute;
+    left: -50px;
+    width: 1670px;
+    height: 700px;
+    bottom: 100px;
+    background-image: url(img/steve.art/background.png);
+    background-size: 100% 100%;
+    z-index: -4;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crumble</title>
+        <link rel = "stylesheet" href = "new.css"/>
+        <script src="jquery.min.js"></script>
+    </head>
+    <body>
+        <div class = "map">
+            <div id="artBox">
+                <div id="leftHouse"></div>
+                <div id="rightHouse"></div>
+                <div id="back"></div>
+            </div>
+            <div class = "man one"></div>
+            <div class = "man two"></div>
+            <div class = "line oo"></div>
+            <div class = "line tt"></div>
+            <div class = "meteor"></div>
+            <div class = "shielding"></div>
+            <div class = "ground bottom"></div>
+            <div class = "ground left"></div>
+            <div class = "ground right"></div>
+            <div class = "sign Ma"></div>
+            <div class = "sign Me"></div>
+            <div id="bulletBox"></div>
+            <div id="speedTip"></div>
+            <div id="bloodBox">
+                <div></div>
+            </div>
+            <div class = "medical kit"></div>
+            <div class = "medical bottle"></div>
+            <div id="aiBox"></div>
+            <div id="fireBox"></div>
+            <div class = "gg">
+                <p class = "winner"></p>
+            </div>
+            <div class = "start">Round 1</div>
+        </div>
+        
+        <div class = "health B1">
+            <div class = "H1 h10"></div>
+            <div class = "H1 shield"></div>
+            <div class = "H1 h11"></div>
+        </div>
+        <div class = "health B2">
+            <div class = "H2 h20"></div>
+            <div class = "H2 h21"></div>
+        </div>
+        <div class = "tip mag">
+            <div class = "cd q">X</div>
+            <div class = "cd v">C</div>
+            <div class = "cd e">V</div>
+            <div class = "cd r">Q</div>
+        </div>
+        <div class = "tip mech">
+            <div class = "cd u">M</div>
+            <div class = "cd o">,</div>
+            <div class = "cd p">.</div>
+            <div class = "cd l">L</div>
+        </div>
+        <div class = "energy Mag">
+            <div class = "En1 enLine"></div>
+        </div>
+        <div class = "energy Mech">
+            <div class = "En2 enLine"></div>
+        </div>
+        <div id = "sound">
+            <audio class = "MageAudio">
+                <source src="sound/mage/fireAtk.mp3" type="audio/mpeg" /><!--0-->
+            </audio>
+            <audio class = "MageAudio">
+                <source src="sound/mage/fireboom.mp3" type="audio/mpeg" /><!--1-->
+            </audio>
+            <audio class = "MageAudio">
+                <source src="sound/mage/mage.ah1.mp3" type="audio/mpeg" /><!--2-->
+            </audio>
+            <audio class = "MageAudio">
+                <source src="sound/mage/mage.ah2.mp3" type="audio/mpeg" /><!--3-->
+            </audio>
+            <audio class = "MageAudio">
+                <source src="sound/mage/mage.ah3.mp3" type="audio/mpeg" /><!--4-->
+            </audio>
+            <audio class = "MageAudio">
+                <source src="sound/mage/mageDie.mp3" type="audio/mpeg" /><!--5-->
+            </audio>
+            <audio class = "MageAudio">
+                <source src="sound/mage/mageWin.mp3" type="audio/mpeg" /><!--6-->
+            </audio>
+            <audio class = "MageAudio">
+                <source src="sound/mage/servant.die.mp3" type="audio/mpeg" /><!--7-->
+            </audio>
+            <audio class = "MageAudio">
+                <source src="sound/mage/servant.say.mp3" type="audio/mpeg" /><!--8-->
+            </audio>
+            <audio class = "MageAudio">
+                <source src="sound/mage/yes.my.mp3" type="audio/mpeg" /><!--9-->
+            </audio>
+            <audio class = "MageAudio">
+                <source src="sound/mage/tinyfire.mp3" type="audio/mpeg" /><!--10-->
+            </audio>
+            <audio class = "MageAudio">
+                <source src="sound/mage/stop.mp3" type="audio/mpeg" /><!--11-->
+            </audio>
+            <audio class = "MechAudio">
+                <source src="sound/mech/boom.mp3" type="audio/mpeg" /><!--0-->
+            </audio>
+            <audio class = "MechAudio">
+                <source src="sound/mech/crazy.mp3" type="audio/mpeg" /><!--1-->
+            </audio>
+            <audio class = "MechAudio">
+                <source src="sound/mech/drone.mp3" type="audio/mpeg" /><!--2-->
+            </audio>
+            <audio class = "MechAudio">
+                <source src="sound/mech/droneboom.mp3" type="audio/mpeg" /><!--3-->
+            </audio>
+            <audio class = "MechAudio">
+                <source src="sound/mech/flash.mp3" type="audio/mpeg" /><!--4-->
+            </audio>
+            <audio class = "MechAudio">
+                <source src="sound/mech/grenade.mp3" type="audio/mpeg" /><!--5-->
+            </audio>
+            <audio class = "MechAudio">
+                <source src="sound/mech/mechDie.mp3" type="audio/mpeg" /><!--6-->
+            </audio>
+            <audio class = "MechAudio">
+                <source src="sound/mech/mechhurt1.mp3" type="audio/mpeg" /><!--7-->
+            </audio>
+            <audio class = "MechAudio">
+                <source src="sound/mech/mechhurt2.mp3" type="audio/mpeg" /><!--8-->
+            </audio>
+            <audio class = "MechAudio">
+                <source src="sound/mech/mechhurt3.mp3" type="audio/mpeg" /><!--9-->
+            </audio>
+            <audio class = "MechAudio">
+                <source src="sound/mech/mechWin.mp3" type="audio/mpeg" /><!--10-->
+            </audio>
+            <audio class = "MechAudio">
+                <source src="sound/mech/reload.mp3" type="audio/mpeg" /><!--11-->
+            </audio>
+            <audio class = "MechAudio">
+                <source src="sound/mech/reloadFast.mp3" type="audio/mpeg" /><!--12-->
+            </audio>
+            <audio class = "MechAudio">
+                <source src="sound/mech/walk.mp3" type="audio/mpeg" /><!--13-->
+            </audio>
+            <audio class = "healAudio">
+                <source src="sound/heal.mp3" type="audio/mpeg" />
+            </audio>
+            <audio class = "roundAudio">
+                <source src="sound/round1.mp3" type="audio/mpeg" />
+            </audio>
+            <audio class = "roundAudio">
+                <source src="sound/round2.mp3" type="audio/mpeg" />
+            </audio>
+            <audio class = "roundAudio">
+                <source src="sound/round3.mp3" type="audio/mpeg" />
+            </audio>
+            <audio class = "roundAudio">
+                <source src="sound/fight.mp3" type="audio/mpeg" />
+            </audio>
+            <audio class = "BGM">
+                <source src="sound/BGM.mp3" type="audio/mpeg" />
+            </audio>
+        </div>
+        <div class = "replay">Replay</div>
+        <script src ="control.js"></script>
+    </body>
+</html>
